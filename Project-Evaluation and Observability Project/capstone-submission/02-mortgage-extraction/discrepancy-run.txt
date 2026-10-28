@@ -1,0 +1,36 @@
+$ .venv/bin/mortgage-extract fixtures/documents/income_sum_mismatch.txt --mode replay
+{
+  "extraction": {
+    "borrower": {
+      "full_name": "Marcus T. Hollingsworth",
+      "coborrower_name": null,
+      "ssn_last4": null,
+      "date_of_birth": null,
+      "email": null,
+      "phone": null
+    },
+    "property": null,
+    "loan": null,
+    "income": {
+      "base_monthly": 5416.67,
+      "bonus_monthly": 1250.0,
+      "bonus_ytd": null,
+      "commission_monthly": 2140.0,
+      "overtime_monthly": 385.5,
+      "other_monthly": 450.0,
+      "stated_monthly_total": 10892.17
+    }
+  },
+  "validation": {
+    "consistent": false,
+    "discrepancies": [
+      {
+        "field": "total_monthly_income",
+        "calculated": 9642.17,
+        "stated": 10892.17,
+        "delta": -1250.0
+      }
+    ]
+  }
+}
+[exit 1]

@@ -1,0 +1,7 @@
+$ mypy supply_chain_risk/
+Success: no issues found in 8 source files
+[exit 0]
+
+$ ruff check supply_chain_risk/ tests/
+All checks passed!
+[exit 0]

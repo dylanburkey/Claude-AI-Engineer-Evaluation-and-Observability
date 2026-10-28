@@ -1,0 +1,22 @@
+$ mortgage-extract perturbed/income_total_fixed.txt --mode record
+Traceback (most recent call last):
+  File "/Users/dylanburkey/dev/cd15552-Claude-AI-Engineer-Evaluation-and-Observability/Build a Resilient Mortgage Document Extraction System/04-validate-mathematical-consistency/solution/.venv/bin/mortgage-extract", line 12, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/dylanburkey/dev/cd15552-Claude-AI-Engineer-Evaluation-and-Observability/Build a Resilient Mortgage Document Extraction System/04-validate-mathematical-consistency/solution/mortgage_extractor/__main__.py", line 60, in main
+    extraction = pipeline.run(document_text)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dylanburkey/dev/cd15552-Claude-AI-Engineer-Evaluation-and-Observability/Build a Resilient Mortgage Document Extraction System/04-validate-mathematical-consistency/solution/mortgage_extractor/pipeline.py", line 61, in run
+    return self.extract(document_text, classification.document_type)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dylanburkey/dev/cd15552-Claude-AI-Engineer-Evaluation-and-Observability/Build a Resilient Mortgage Document Extraction System/04-validate-mathematical-consistency/solution/mortgage_extractor/pipeline.py", line 129, in extract
+    return MortgageExtraction.model_validate(block.input)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dylanburkey/dev/cd15552-Claude-AI-Engineer-Evaluation-and-Observability/Build a Resilient Mortgage Document Extraction System/04-validate-mathematical-consistency/solution/.venv/lib/python3.12/site-packages/pydantic/main.py", line 790, in model_validate
+    return cls.__pydantic_validator__.validate_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for MortgageExtraction
+loan.amount
+  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.14/v/float_type
+[exit 1]

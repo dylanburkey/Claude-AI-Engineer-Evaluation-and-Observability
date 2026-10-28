@@ -1,0 +1,46 @@
+$ .venv/bin/mortgage-extract fixtures/documents/appraisal_informal_sqft.txt --mode replay
+{
+  "extraction": {
+    "borrower": {
+      "full_name": "Hartwell, J. and Hartwell, M.",
+      "coborrower_name": "Hartwell, M.",
+      "ssn_last4": null,
+      "date_of_birth": null,
+      "email": null,
+      "phone": null
+    },
+    "property": {
+      "address": "4827 Brookhaven Court, Fairhope, NC 28734",
+      "property_type": "single_family",
+      "property_type_detail": null,
+      "occupancy_type": "primary_residence",
+      "occupancy_type_detail": null,
+      "year_built": 1998,
+      "gross_living_area_sqft": 2400,
+      "hoa_dues_monthly": null,
+      "appraised_value": 410000.0
+    },
+    "loan": {
+      "amount": 410000.0,
+      "term_months": null,
+      "interest_rate": null,
+      "loan_purpose": null,
+      "loan_purpose_detail": null,
+      "loan_program": null
+    },
+    "income": {
+      "base_monthly": null,
+      "bonus_monthly": null,
+      "bonus_ytd": null,
+      "commission_monthly": null,
+      "overtime_monthly": null,
+      "other_monthly": null,
+      "stated_monthly_total": null
+    }
+  },
+  "validation": {
+    "consistent": true,
+    "discrepancies": []
+  }
+}
+[exit 0]

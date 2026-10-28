@@ -1,0 +1,12 @@
+$ mortgage-extract fixtures/documents/appraisal_informal_sqft.txt --mode replay --verbose  (stderr log)
+mortgage_extractor.pipeline: classify: model=claude-haiku-4-5-20251001 in=2169 out=108 type=appraisal
+mortgage_extractor.pipeline: extract: model=claude-haiku-4-5-20251001 in=4123 out=407 tool=extract_appraisal
+
+$ mortgage-extract fixtures/documents/income_sum_mismatch.txt --mode replay --verbose  (stderr log)
+mortgage_extractor.pipeline: classify: model=claude-haiku-4-5-20251001 in=1612 out=96 type=income_verification
+mortgage_extractor.pipeline: extract: model=claude-haiku-4-5-20251001 in=3771 out=199 tool=extract_income_verification
+
+$ mortgage-extract fixtures/documents/income_missing_bonus.txt --mode replay --verbose  (stderr log)
+mortgage_extractor.pipeline: classify: model=claude-haiku-4-5-20251001 in=1536 out=97 type=income_verification
+mortgage_extractor.pipeline: extract: model=claude-haiku-4-5-20251001 in=3695 out=190 tool=extract_income_verification
+

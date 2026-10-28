@@ -1,0 +1,60 @@
+$ policy-extractor pipeline data/policies/ --routing-out routing_decisions.json --spot-check-pct 0.2 --seed 42
+2026-10-27 09:40:02,529 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-27 09:40:12,759 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-27 09:40:12,761 INFO review_disagreement policy_id=POL-2025-001 fields=['coverage_limit', 'endorsements']
+2026-10-27 09:40:16,253 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-27 09:40:23,465 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-27 09:40:23,468 INFO review_disagreement policy_id=POL-2025-002 fields=['deductible', 'coverage_limit']
+2026-10-27 09:40:26,479 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-27 09:40:31,434 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-27 09:40:31,436 INFO review_disagreement policy_id=POL-2025-003 fields=['coverage_limit']
+2026-10-27 09:40:34,790 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-27 09:40:43,778 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-27 09:40:43,783 INFO review_disagreement policy_id=POL-2025-004 fields=['deductible', 'coverage_limit', 'exclusions']
+2026-10-27 09:40:47,470 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-27 09:40:56,761 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-27 09:40:56,763 INFO review_disagreement policy_id=POL-2025-005 fields=['deductible', 'coverage_limit', 'endorsements']
+2026-10-27 09:41:00,228 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-27 09:41:06,012 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-27 09:41:06,013 INFO review_disagreement policy_id=POL-2025-006 fields=['deductible']
+2026-10-27 09:41:09,525 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-27 09:41:12,703 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-27 09:41:16,299 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-27 09:41:21,243 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-27 09:41:21,247 INFO review_disagreement policy_id=POL-2025-008 fields=['policy_type']
+2026-10-27 09:41:24,047 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-27 09:41:24,049 INFO validation_failed
+2026-10-27 09:41:28,041 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-27 09:41:28,045 INFO validation_failed
+2026-10-27 09:41:31,878 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-27 09:41:37,749 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-27 09:41:37,753 INFO review_disagreement policy_id=POL-2025-010 fields=['coverage_limit']
+{
+  "decisions_written": 9,
+  "auto_approve": 0,
+  "human_review": 8,
+  "spot_check": 1,
+  "escalations": 1,
+  "pattern_summary": {
+    "endorsements_absent": {
+      "count": 1,
+      "policies": [
+        "POL-2025-009"
+      ],
+      "categories": [
+        "missing_source"
+      ]
+    },
+    "premium_does_not_match_components": {
+      "count": 1,
+      "policies": [
+        "POL-2025-010"
+      ],
+      "categories": [
+        "consistency"
+      ]
+    }
+  },
+  "output_path": "/Users/dylanburkey/dev/cd15552-Claude-AI-Engineer-Evaluation-and-Observability/Project-Evaluation and Observability Project/capstone-submission/01-policy-pipeline/routing_decisions.json"
+}
+[exit 0]

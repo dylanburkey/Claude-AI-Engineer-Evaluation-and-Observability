@@ -1,0 +1,53 @@
+$ mortgage-extract fixtures/documents/income_sum_mismatch.txt --mode record   # unperturbed, live
+{
+  "extraction": {
+    "borrower": {
+      "full_name": "Marcus T. Hollingsworth",
+      "coborrower_name": null,
+      "ssn_last4": null,
+      "date_of_birth": null,
+      "email": null,
+      "phone": null
+    },
+    "property": {
+      "address": "<UNKNOWN>",
+      "property_type": "other",
+      "property_type_detail": null,
+      "occupancy_type": null,
+      "occupancy_type_detail": null,
+      "year_built": null,
+      "gross_living_area_sqft": null,
+      "hoa_dues_monthly": null,
+      "appraised_value": null
+    },
+    "loan": {
+      "amount": 0.0,
+      "term_months": null,
+      "interest_rate": null,
+      "loan_purpose": null,
+      "loan_purpose_detail": null,
+      "loan_program": null
+    },
+    "income": {
+      "base_monthly": 5416.67,
+      "bonus_monthly": 1250.0,
+      "bonus_ytd": null,
+      "commission_monthly": 2140.0,
+      "overtime_monthly": 385.5,
+      "other_monthly": 450.0,
+      "stated_monthly_total": 10892.17
+    }
+  },
+  "validation": {
+    "consistent": false,
+    "discrepancies": [
+      {
+        "field": "total_monthly_income",
+        "calculated": 9642.17,
+        "stated": 10892.17,
+        "delta": -1250.0
+      }
+    ]
+  }
+}
+[exit 1]
