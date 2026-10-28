@@ -22,6 +22,7 @@ project name. Code paths are relative to each project's final `solution/` direct
 | OS & version | macOS 26.5.2 (build 25F84), arm64 — `environment.txt` |
 | Python version | 3.12.15 in each project venv (system Python is 3.15.1; 3.12 used for chromadb/torch wheels) — `environment.txt` |
 | Date run | 2026-10-27 |
+| Screenshots | Taken on 2026-10-28 from a separate, later run, not the runs cited in this brief. Two numbers differ because of that: System 1 tests show 48 passed (`ANTHROPIC_API_KEY` was set, so the 3 live tests ran instead of skipping), and the live pipeline run shows 0 / 9 / 0 routing counts instead of 0 / 8 / 1, because model output varies between runs. The text captures (`tests.txt`, `pipeline-run.txt`, `routing_decisions.json`) are the cited evidence. |
 | Ran any system live? (which) | Yes — System 1 (`pipeline-run.txt`, `perturbation-run.txt`) and System 2 perturbations + live control (`perturbation-run*.txt`, `live-unperturbed-control.txt`), via the course Anthropic endpoint with `claude-haiku-4-5-20251001`. System 2 baseline runs used `--mode replay`; System 3 ran `--offline`. |
 
 ---
